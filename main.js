@@ -66,8 +66,11 @@ function handleAnswerSubmission() {
 function endSession() {
   // Calculate the result and display it
   const percentageCorrect = (sessionData.correctAnswers / sessionData.questionsAnswered) * 100;
-  document.getElementById('test').style.display = 'none';
-  document.getElementById('result').style.display = 'block';
+  document.getElementById('test').style.display = 'none';  // Hide the test section
+  document.getElementById('result').style.display = 'block'; // Show the results section
 
-  document.getElementById('score').innerText = `You answered ${sessionData.correctAnswers} out of ${sessionData.questionsAnswered} questions correctly. (${percentageCorrect.toFixed(2)}%)`;
+  // Update the result text
+  const resultText = `${sessionData.correctAnswers} \n ${sessionData.questionsAnswered}`;
+  document.getElementById('resultText').innerText = resultText;
 }
+
