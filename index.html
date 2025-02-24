@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Facts Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>  <!-- Link to your JS file -->
+</head>
+<body>
+    <!-- Firebase Scripts for Compat SDK (v8-style) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <h1>Multiplication Facts Practice</h1>
+    <!-- Start Test Button -->
+    <div id="startButtonDiv">
+        <button id="startButton">Start Test</button>
+    </div>
+
+    <!-- Test Area -->
+    <div id="test" style="display: none;">
+        <h2>Multiplication Test</h2>
+        <p id="question"></p>
+        <input type="number" id="answer" placeholder="Your answer">
+        <br />
+        <button id="submitAnswer">Submit Answer</button>
+        <p id="feedback"></p>
+    </div>
+
+    <!-- Results Area -->
+    <div id="result" style="display: none;">
+        <h2>Test Results</h2>
+        <p id="resultText"></p>
+    </div>
+    <script>
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var firebaseConfig = {
+          apiKey: "AIzaSyBHmcy4E3s0AKjeiRzI2CySihCV1itE0fI",
+          authDomain: "this-will-work-7daa7.firebaseapp.com",
+          projectId: "this-will-work-7daa7",
+          storageBucket: "this-will-work-7daa7.firebasestorage.app",
+          messagingSenderId: "781740402888",
+          appId: "1:781740402888:web:e11b4a7641ba8baa0f5dfd",
+          measurementId: "G-473SSWP37X"
+        };
+        firebase.initializeApp(firebaseConfig)
+  ;    </script>
+</body>
+</html>
