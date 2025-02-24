@@ -24,15 +24,15 @@ function startTest() {
   // Start the test by asking the first question
   askQuestion();
 
-  // End the session after 5 minutes (200000 milliseconds)
-  setTimeout(endSession, 10000); // 5 minutes
+  // End the session after 4 minutes (200000 milliseconds)
+  setTimeout(endSession, 240000); // 4 minutes
 }
 
 let currentQuestion;
 
 function askQuestion() {
-  const num1 = Math.floor(Math.random() * 10) + 1;
-  const num2 = Math.floor(Math.random() * 10) + 1;
+  const num1 = Math.floor(Math.random() * 9) + 2;
+  const num2 = Math.floor(Math.random() * 9) + 2;
   currentQuestion = { num1, num2 };
   document.getElementById('question').innerText = `What is ${num1} x ${num2}?`;
   document.getElementById('answer').value = '';
